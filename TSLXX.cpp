@@ -4,30 +4,30 @@
 
 #include "TSLXX.h"
 
-#include "ic-classes.h"
+#ifdef IC_TSL1401
+    #include "TSL1401.h"
+#endif
+#ifdef IC_TSL1402
+    #include "TSL1402.h"
+#endif
+#ifdef IC_TSL1406
+    #include "TSL1406.h"
+#endif
+#ifdef IC_TSL1412
+    #include "TSL1412.h"
+#endif
+#ifdef IC_TSL201
+    #include "TSL201.h"
+#endif
+#ifdef IC_LF1401
+    #include "LF1401.h"
+#endif
+#ifdef IC_LF1402
+    #include "LF1402.h"
+#endif
 
-
-// #ifdef IC_TSL1401
-//     #include "TSL1401.h"
-// #endif
-// #ifdef IC_TSL1402
-//     #include "TSL1402.h"
-// #endif
-// #ifdef IC_TSL1406
-//     #include "TSL1406.h"
-// #endif
-// #ifdef IC_TSL1412
-//     #include "TSL1412.h"
-// #endif
-// #ifdef IC_TSL201
-//     #include "TSL201.h"
-// #endif
-// #ifdef IC_LF1401
-//     #include "LF1401.h"
-// #endif
-
-//extern const int L_ARRAY;
-//extern const int L_ARRAY_1;
+extern const int L_ARRAY;
+extern const int L_ARRAY_1;
 
 //global vars
 uint8_t CLKcycleCounter = 0; // counts the number of clock cycles expired
